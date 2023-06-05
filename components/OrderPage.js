@@ -78,7 +78,7 @@ export class OrderPage extends HTMLElement {
       set(target, property, value) {
         target[property] = value;
         form.elements[property].value = value;
-        return true;this.setFormBindings(this.root.querySelector("form"));
+        return true;
       },
     });
     Array.from(form.elements).forEach((element) => {
