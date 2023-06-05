@@ -26,14 +26,13 @@ const Router = {
                 break;
             case "/order":
                 pageElement = document.createElement("order-page");
-                pageElement.textContent = "Order";
                 break;
             default:
                 if (route.startsWith("/product-")) {
                     pageElement = document.createElement("details-page");
                     pageElement.textContent = "Order";
                     const paramId = route.substring(route.lastIndexOf("-") + 1);
-                    pageElement.dataset.id = paramId;
+                    pageElement.dataset.productId= paramId;
                 }
         }
         if (pageElement) {
