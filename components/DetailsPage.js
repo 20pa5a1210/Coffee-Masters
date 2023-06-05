@@ -1,5 +1,5 @@
 import { getProductById } from '../services/Menu.js';
-import { addToCard } from '../services/Order.js';
+import {  addToCart } from '../services/Order.js';
 
 export class DetailsPage extends HTMLElement {
 
@@ -30,7 +30,7 @@ export class DetailsPage extends HTMLElement {
             this.root.querySelector(".price").textContent = `$ ${this.product.price.toFixed(2)} ea`
             this.root.querySelector("button").addEventListener("click", ()=> {
                 // TODoO addToCart(this.product.id); 
-                addToCard(this.product.id)
+                addToCart(this.product.id)
                 app.router.go('/order');
             })
         } else {
